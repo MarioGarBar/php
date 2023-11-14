@@ -1,0 +1,67 @@
+/* Estilos generales */
+
+/* Resetear márgenes y rellenos para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.brand-image img {
+    max-width: 150px; /* Ajustar el ancho máximo según tu diseño */
+}
+
+.cart {
+    position: relative;
+}
+
+.cart img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 300px;
+}
+
+.cart table,
+.cart a#vaciar-carrito {
+    display: none; /* Oculta la tabla y el botón inicialmente */
+}
+
+.cart:hover table,
+.cart:hover a#vaciar-carrito {
+    display: block;
+}
+
+/* Estilos de la barra de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Cambiar color al pasar el mouse */
+}
