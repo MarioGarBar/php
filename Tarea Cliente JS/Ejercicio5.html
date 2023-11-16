@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio 5</h1>
+    <script>
+        var dni, input;
+
+        
+        while(true){
+
+            input = prompt('Introduzca los numero de su dni:')
+            dni = parseInt(input);
+
+            //Salir del programa al pulsar cancelar
+            if(input === null){
+                break;
+            }
+            
+            //comprobamos valores
+            if(isNaN(dni) || dni < 0 || dni >99999999){
+                alert('Error, introduzca solo numeros entre 0 y 99999999');
+            
+            }
+
+            //Calcular letra dni
+            var letrasdni='TRWAGMYFPDXBNJZSQVHLCKE';
+            var letra;
+            letra =letrasdni.charAt(dni%23);
+
+           alert('la letra del dni es: '+letra);
+
+
+            
+        }
+        
+        
+       
+
+
+    </script>
+</body>
+</html>

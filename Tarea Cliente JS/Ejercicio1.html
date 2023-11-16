@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea con rubrica</title>
+   
+</head>
+<body>
+    <h1>Primer ejercicio de la tarea</h1>
+    <script>
+        var edad = prompt("Introduce tu edad: ");
+
+        
+            
+        while(edad<0){
+            alert('Error, introduce una edad correcta');
+            var edad = prompt("Introduce tu edad: ");
+        }
+
+        
+        if(edad<18){
+            alert('Eres menor de edad \n Acceso denegado');
+        }
+        
+        if(edad>= 18){
+            alert('Eres mayor de edad, \n Continua');
+        }
+
+
+    </script>
+</body>
+</html>

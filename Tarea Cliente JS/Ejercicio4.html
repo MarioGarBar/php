@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <h1>Ejercicio 4</h1>
+    <script>
+        var texto ='';
+        var input;
+
+        
+
+        while(true){
+            input = prompt('Introduce una cadena de texto: ');
+
+            if(input === null){
+                break;
+            }
+            
+            //Usamos un operador ternario para verificar que la cadena de texto está vacia y no añadir
+            // '-' al principio
+            texto = texto.length === 0 ? input : texto + ' - ' + input;
+        }
+        
+        console.log(texto);
+
+
+    </script>
+</body>
+</html>
