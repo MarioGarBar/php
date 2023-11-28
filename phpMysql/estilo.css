@@ -1,0 +1,7 @@
+body{
+    background-color: brown;
+}
+h1, form{
+    align-content: center;
+    justify-content: center;
+}
