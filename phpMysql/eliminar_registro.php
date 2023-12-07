@@ -37,9 +37,8 @@
 
 
         //Query
-        $consulta="INSERT INTO `artículos`(`SECCIÓN`, `NOMBRE ARTÍCULO`, `FECHA`, `PAÍS DE ORIGEN`, `PRECIO`) 
-        VALUES ('$seccion', '$nombre_art', '$fecha', '$pOrigen', $precio);
-        ";
+        $consulta="DELETE FROM `artículos` WHERE `NOMBRE ARTÍCULO` = '$nombre_art'";
+
 
 
 
@@ -48,14 +47,13 @@
         if($resultado==false){
             echo "Error en la consulta";
         }else{
-            echo "Datos registrados <br><br>";
-
-            echo "<table><tr><td>$seccion</tr></td>";
-            echo "<table><tr><td>$nombre_art</tr></td>";
-            echo "<table><tr><td>$fecha</tr></td>";
-            echo "<table><tr><td>$pOrigen</tr></td>";
-            echo "<table><tr><td>$precio</tr></td></table>";
-
+            
+            if(mysqli_affected_rows($conexion)==0){
+                echo "No hay registros coincidente con el campo introducido";
+            }else{
+                echo "Se han eliminado: " . mysqli_affected_rows($conexion). " registros";
+                echo "Registro $nombre_art eliminado";
+            }
             
         }
         

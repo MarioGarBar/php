@@ -14,7 +14,7 @@
     
 
         
-        require("datos_conexion.php");
+        require("../datos_conexion.php");
        
 
         //conexion con funcion mysqli_connect
@@ -37,9 +37,8 @@
 
 
         //Query
-        $consulta="INSERT INTO `artículos`(`SECCIÓN`, `NOMBRE ARTÍCULO`, `FECHA`, `PAÍS DE ORIGEN`, `PRECIO`) 
-        VALUES ('$seccion', '$nombre_art', '$fecha', '$pOrigen', $precio);
-        ";
+        $consulta="UPDATE  ARTÍCULOS SET SECCIÓN='$seccion', `NOMBRE ARTÍCULO`='$nombre_art', FECHA='$fecha', `PAÍS DE ORIGEN`='$pOrigen', PRECIO='$precio'
+        WHERE 'NOMBRE ARTÍCULO'='$nombre_art'";
 
 
 
